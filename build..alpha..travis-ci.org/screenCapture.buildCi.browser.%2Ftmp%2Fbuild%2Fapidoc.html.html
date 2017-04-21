@@ -1,0 +1,533 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/lahmatiy/es6-promise-polyfill#readme">es6-promise-polyfill (v1.2.0)</a>
+</h1>
+<h4>Polyfill for ES6 Promise</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-promise-polyfill">module es6-promise-polyfill</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Polyfill
+            <span class="apidocSignatureSpan">(resolver)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Promise">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Promise
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Polyfill.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-promise-polyfill.Polyfill">module es6-promise-polyfill.Polyfill</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.Polyfill">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Polyfill
+            <span class="apidocSignatureSpan">(resolver)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.all">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>all
+            <span class="apidocSignatureSpan">(promises)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.race">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>race
+            <span class="apidocSignatureSpan">(promises)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.reject">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>reject
+            <span class="apidocSignatureSpan">(reason)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.resolve">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>resolve
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-promise-polyfill.Polyfill.prototype">module es6-promise-polyfill.Polyfill.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.prototype.catch">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>catch
+            <span class="apidocSignatureSpan">(onRejection)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.prototype.constructor">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(resolver)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-promise-polyfill.Polyfill.prototype.then">
+            function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>then
+            <span class="apidocSignatureSpan">(onFulfillment, onRejection)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>then_</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>state_</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-promise-polyfill" id="apidoc.module.es6-promise-polyfill">module es6-promise-polyfill</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill" id="apidoc.element.es6-promise-polyfill.Polyfill">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Polyfill
+        <span class="apidocSignatureSpan">(resolver)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(resolver){
+  if (typeof resolver !== 'function')
+    throw new TypeError('Promise constructor takes a function argument');
+
+  if (this instanceof Promise === false)
+    throw new TypeError('Failed to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called
+ as a function.');
+
+  this.then_ = [];
+
+  invokeResolver(resolver, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Promise" id="apidoc.element.es6-promise-polyfill.Promise">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Promise
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-promise-polyfill.Polyfill" id="apidoc.module.es6-promise-polyfill.Polyfill">module es6-promise-polyfill.Polyfill</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.Polyfill" id="apidoc.element.es6-promise-polyfill.Polyfill.Polyfill">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.</span>Polyfill
+        <span class="apidocSignatureSpan">(resolver)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(resolver){
+  if (typeof resolver !== 'function')
+    throw new TypeError('Promise constructor takes a function argument');
+
+  if (this instanceof Promise === false)
+    throw new TypeError('Failed to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called
+ as a function.');
+
+  this.then_ = [];
+
+  invokeResolver(resolver, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.all" id="apidoc.element.es6-promise-polyfill.Polyfill.all">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>all
+        <span class="apidocSignatureSpan">(promises)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (promises){
+  var Class = this;
+
+  if (!isArray(promises))
+    throw new TypeError('You must pass an array to Promise.all().');
+
+  return new Class(function(resolve, reject){
+    var results = [];
+    var remaining = 0;
+
+    function resolver(index){
+      remaining++;
+      return function(value){
+        results[index] = value;
+        if (!--remaining)
+          resolve(results);
+      };
+    }
+
+    for (var i = 0, promise; i &lt; promises.length; i++)
+    {
+      promise = promises[i];
+
+      if (promise &amp;&amp; typeof promise.then === 'function')
+        promise.then(resolver(i), reject);
+      else
+        results[i] = promise;
+    }
+
+    if (!remaining)
+      resolve(results);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+};
+
+Promise.all = function(promises){
+  var Class = this;
+
+  if (!isArray(promises))
+throw new TypeError('You must pass an array to Promise.<span class="apidocCodeKeywordSpan">all</span>().');
+
+  return new Class(function(resolve, reject){
+var results = [];
+var remaining = 0;
+
+function resolver(index){
+  remaining++;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.race" id="apidoc.element.es6-promise-polyfill.Polyfill.race">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>race
+        <span class="apidocSignatureSpan">(promises)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">race = function (promises){
+  var Class = this;
+
+  if (!isArray(promises))
+    throw new TypeError('You must pass an array to Promise.race().');
+
+  return new Class(function(resolve, reject) {
+    for (var i = 0, promise; i &lt; promises.length; i++)
+    {
+      promise = promises[i];
+
+      if (promise &amp;&amp; typeof promise.then === 'function')
+        promise.then(resolve, reject);
+      else
+        resolve(promise);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+};
+
+Promise.race = function(promises){
+  var Class = this;
+
+  if (!isArray(promises))
+    throw new TypeError('You must pass an array to Promise.<span class="apidocCodeKeywordSpan">race</span>().');
+
+  return new Class(function(resolve, reject) {
+    for (var i = 0, promise; i &lt; promises.length; i++)
+    {
+promise = promises[i];
+
+if (promise &amp;&amp; typeof promise.then === 'function')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.reject" id="apidoc.element.es6-promise-polyfill.Polyfill.reject">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>reject
+        <span class="apidocSignatureSpan">(reason)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reject = function (reason){
+  var Class = this;
+
+  return new Class(function(resolve, reject){
+    reject(reason);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.resolve" id="apidoc.element.es6-promise-polyfill.Polyfill.resolve">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.</span>resolve
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (value){
+  var Class = this;
+
+  if (value &amp;&amp; typeof value === 'object' &amp;&amp; value.constructor === Class)
+    return value;
+
+  return new Class(function(resolve){
+    resolve(value);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-promise-polyfill.Polyfill.prototype" id="apidoc.module.es6-promise-polyfill.Polyfill.prototype">module es6-promise-polyfill.Polyfill.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.prototype.catch" id="apidoc.element.es6-promise-polyfill.Polyfill.prototype.catch">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>catch
+        <span class="apidocSignatureSpan">(onRejection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">catch = function (onRejection) {
+  return this.then(null, onRejection);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Promise = require('es6-promise-polyfill').Promise;
+var promise = new Promise(...);
+```
+
+## Usage in IE&lt;9
+
+`catch` is a reserved word in IE&lt;9, meaning `promise.<span class="apidocCodeKeywordSpan">catch</span>(func)` throws a syntax
+ error. To work around this, use a string to access the property:
+
+```js
+promise['catch'](function(err) {
+  // ...
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.prototype.constructor" id="apidoc.element.es6-promise-polyfill.Polyfill.prototype.constructor">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(resolver)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(resolver){
+  if (typeof resolver !== 'function')
+    throw new TypeError('Promise constructor takes a function argument');
+
+  if (this instanceof Promise === false)
+    throw new TypeError('Failed to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called
+ as a function.');
+
+  this.then_ = [];
+
+  invokeResolver(resolver, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  state_: PENDING,
+  then_: null,
+  data_: undefined,
+
+  then: function(onFulfillment, onRejection){
+var subscriber = {
+  owner: this,
+  then: new this.<span class="apidocCodeKeywordSpan">constructor</span>(NOOP),
+  fulfilled: onFulfillment,
+  rejected: onRejection
+};
+
+if (this.state_ === FULFILLED || this.state_ === REJECTED)
+{
+  // already resolved, call callback async
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-promise-polyfill.Polyfill.prototype.then" id="apidoc.element.es6-promise-polyfill.Polyfill.prototype.then">
+        function <span class="apidocSignatureSpan">es6-promise-polyfill.Polyfill.prototype.</span>then
+        <span class="apidocSignatureSpan">(onFulfillment, onRejection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">then = function (onFulfillment, onRejection){
+  var subscriber = {
+    owner: this,
+    then: new this.constructor(NOOP),
+    fulfilled: onFulfillment,
+    rejected: onRejection
+  };
+
+  if (this.state_ === FULFILLED || this.state_ === REJECTED)
+  {
+    // already resolved, call callback async
+    asyncCall(invokeCallback, subscriber);
+  }
+  else
+  {
+    // subscribe
+    this.then_.push(subscriber);
+  }
+
+  return subscriber.then;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // ...
+});
+```
+
+Or use `.then` instead:
+
+```js
+promise.<span class="apidocCodeKeywordSpan">then</span>(undefined, function(err) {
+  // ...
+});
+```
+
+## License
+
+Licensed under the MIT License.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
